@@ -22,6 +22,8 @@ INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'u
 [CI/test]   ✅  Success - Complete job
 [CI/test] 🏁  Job failed
 Error: Job 'test' failed
+
+
 root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#  docker cp src=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc/. dst=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc^C
 root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# act -j test  -P  ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-22.04
 INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'
