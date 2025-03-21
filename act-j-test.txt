@@ -1,0 +1,45 @@
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# act -j test -P ubuntu-latest=-self-hosted
+INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'
+[CI/test] ⭐ Run Set up job
+[CI/test]   ✅  Success - Set up job
+[CI/test]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v1
+[CI/test] ⭐ Run Main actions/checkout@v2
+[CI/test]   ✅  Success - Main actions/checkout@v2
+[CI/test] ⭐ Run Main actions/setup-node@v1
+| [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /root/.cache/act/0caba7ef5cfb1fb4/tmp/86a3debb-07c5-4370-b971-470f150ad184 -f /root/.cache/act/0caba7ef5cfb1fb4/tmp/c39a7653-a384-43dd-a4d8-c44209509a8b
+| [command]/root/.cache/act/tool_cache/node/10.24.1/x64/bin/node --version
+| v10.24.1
+| [command]/root/.cache/act/tool_cache/node/10.24.1/x64/bin/npm --version
+| 6.14.12
+[CI/test]   ❓ add-matcher /root/.cache/act/0caba7ef5cfb1fb4/act/actions/actions-setup-node@v1/.github/tsc.json
+[CI/test]   ❓ add-matcher /root/.cache/act/0caba7ef5cfb1fb4/act/actions/actions-setup-node@v1/.github/eslint-stylish.json
+[CI/test]   ❓ add-matcher /root/.cache/act/0caba7ef5cfb1fb4/act/actions/actions-setup-node@v1/.github/eslint-compact.json
+[CI/test]   ✅  Success - Main actions/setup-node@v1
+[CI/test]   ⚙  ::add-path:: /root/.cache/act/tool_cache/node/10.24.1/x64/bin
+[CI/test] ⭐ Run Main npm install
+| added 280 packages from 643 contributors and audited 280 packages in 7.206s
+|
+| 25 packages are looking for funding
+|   run `npm fund` for details
+|
+| found 42 vulnerabilities (7 low, 11 moderate, 21 high, 3 critical)
+|   run `npm audit fix` to fix them, or `npm audit` for details
+[CI/test]   ✅  Success - Main npm install
+[CI/test] ⭐ Run Main npm test
+|
+| > github-actions-demo@1.0.0 test /root/.cache/act/0caba7ef5cfb1fb4/hostexecutor
+| > mocha ./tests --recursive
+|
+|
+|
+|   GET /
+|     ✓ should respond with hello world
+|
+|
+|   1 passing (24ms)
+|
+[CI/test]   ✅  Success - Main npm test
+[CI/test] ⭐ Run Complete job
+[CI/test] Cleaning up container for job test
+[CI/test]   ✅  Success - Complete job
+[CI/test] 🏁  Job succeeded
