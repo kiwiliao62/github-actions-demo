@@ -1,0 +1,65 @@
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# act -j test  -P  ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-22.04
+INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'
+[CI/test] ⭐ Run Set up job
+[CI/test] 🚀  Start image=ghcr.io/catthehacker/ubuntu:act-22.04
+[CI/test]   🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= username= forcePull=true
+[CI/test]   🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[CI/test]   ✅  Success - Set up job
+[CI/test]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v1
+[CI/test] Non-terminating error while running 'git clone': some refs were not updated
+[CI/test] ⭐ Run Main actions/checkout@v2
+[CI/test]   🐳  docker cp src=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc/. dst=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc
+[CI/test]   ✅  Success - Main actions/checkout@v2
+[CI/test] ⭐ Run Main actions/setup-node@v1
+[CI/test]   🐳  docker cp src=/root/.cache/act/actions-setup-node@v1/ dst=/var/run/act/actions/actions-setup-node@v1/
+[CI/test]   🐳  docker exec cmd=[/opt/acttoolcache/node/18.20.7/x64/bin/node /var/run/act/actions/actions-setup-node@v1/dist/index.js] user= workdir=
+[CI/test]   ❓  ::error::connect ETIMEDOUT 2606:4700:10::6814:306:443
+[CI/test]   ❌  Failure - Main actions/setup-node@v1
+[CI/test] exitcode '1': failure
+[CI/test] ⭐ Run Complete job
+[CI/test]   ✅  Success - Complete job
+[CI/test] 🏁  Job failed
+Error: Job 'test' failed
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#  docker cp src=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc/. dst=/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc^C
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# act -j test  -P  ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-22.04
+INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'
+[CI/test] ⭐ Run Set up job
+[CI/test] 🚀  Start image=ghcr.io/catthehacker/ubuntu:act-22.04
+[CI/test]   🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= username= forcePull=true
+[CI/test]   🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[CI/test]   ✅  Success - Set up job
+[CI/test]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v1
+[CI/test] ⭐ Run Complete job
+[CI/test] Cleaning up container for job test
+[CI/test]   ✅  Success - Complete job
+[CI/test] 🏁  Job succeeded
+Error: Get "https://github.com/actions/setup-node/info/refs?service=git-upload-pack": unexpected EOF
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# node -v
+v23.10.0
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc#
+root@nbU22:/HD2/dbr/gitWorkflow/demo/github-actions-demo/gitSrc# act -j test  -P  ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-22.04   --reuse
+INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'
+[CI/test] ⭐ Run Set up job
+[CI/test] 🚀  Start image=ghcr.io/catthehacker/ubuntu:act-22.04
+[CI/test]   🐳  docker pull image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= username= forcePull=true
+[CI/test]   🐳  docker create image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker run image=ghcr.io/catthehacker/ubuntu:act-22.04 platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[CI/test]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[CI/test]   ✅  Success - Set up job
+[CI/test]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v1
+[CI/test] ⭐ Run Complete job
+[CI/test] Cleaning up container for job test
+[CI/test]   ✅  Success - Complete job
+[CI/test] 🏁  Job succeeded
+Error: Get "https://github.com/actions/setup-node/info/refs?service=git-upload-pack": unexpected EOF
